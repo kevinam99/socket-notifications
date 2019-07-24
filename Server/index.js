@@ -23,14 +23,14 @@ var routes  = require("../Routes/")(router,mysql,pool);
 app.use('/',router);
 
 http.listen(3000,function(){
-    console.log("Listening on 3000");
+    console.log("Listening on 3000...");
 });
 
 // Handle socket operation.
 // On any connection listen for events.
 
 io.on('connection',function(socket){
-    console.log('We have a user connected !');
+    console.log('We have a user connected!');
         // This event will be emitted from Client when some one add comments.
     socket.on('comment added',function(commentData){
                 // Add the comment in database.
